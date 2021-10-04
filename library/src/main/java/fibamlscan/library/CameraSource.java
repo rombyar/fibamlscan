@@ -686,7 +686,8 @@ public class CameraSource {
      */
     @SuppressLint("Assert")
     void release() {
-      assert (processingThread.getState() == State.TERMINATED);
+      // issue bug: https://github.com/ravi8x/Barcode-Reader/issues/40#issuecomment-774933903
+      // assert (processingThread.getState() == State.TERMINATED);
     }
 
     /** Marks the runnable as active/not active. Signals any blocked threads to continue. */
